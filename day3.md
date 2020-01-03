@@ -6,12 +6,18 @@ There are n people lined up, and each have a height represented as an integer. A
 >Explanation: Only [6, 4, 1] were able to see in front of them.
 
 > \#
+
 > \#
+
 > \# \#
+
 >\#\#\#\#
+
 >\#\#\#\#
+
 >\#\#\#\#\#
->36341\t                                 x (murder scene)
+
+>36341                                 x (murder scene)
 Here's your starting point:
 
 ```python
