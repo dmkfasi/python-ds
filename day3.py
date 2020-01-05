@@ -23,25 +23,14 @@ def witnesses(heights):
 	# Get this very person into account
 	cnt = cnt + 1
 
-	# Shift line one person below
-	mi = mi + 1
-	# Assume the second tallest person
-	m = heights[mi]
+	# Slice people line by the tallest person
+	heights = heights[mi + 1:]
 
-	# Find any person shorter than this one
-	for i in range(mi, ql):
-		height = heights[i]
-
-		# Anyone shorter can see from here
-		if height < m:
-			cnt = cnt + 1
-		# Anyone taller cannot see
-		if height > m:
-			m = height
-			mi = i
+	# Dive in to find other tallest people
+	cnt = cnt + witnesses(heights)
 
 	return cnt
 
 
-print(witnesses([3, 2, 1, 7, 6, 4, 4, 4]))
-# 5
+print(witnesses([7, 2, 1, 7, 6, 3, 4, 6]))
+# 2
