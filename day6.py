@@ -1,23 +1,33 @@
 def matrix_spiral_print(M):
   # Fill this in.
-	h = len(M)
-	w = len(M[0])
-	l = w * h
+	height = len(M)
+	width = len(M[0])
+	length = width * height
 
+	# Column
 	c = 0
+	# Row
 	r = 0
+
+	# Start column
 	sc = 0
+	# Start row
 	sr = 0
 
-	bc = w - 1
-	br = h - 1
+	# Boundary column
+	bc = width - 1
+	# Boundary row
+	br = height - 1
 
+	# Already traversed?
 	trav = 0
+
+	# Output accumulator
 	acc = []
 
-	for i in range(l):
+	for i in range(length):
 
-		acc.append(grid[r][c])
+		acc.append(M[r][c])
 		#print(v, '@', r, 'x', c, ' br, bc:', br, bc)
 
 		if r == sr and c < bc:
@@ -39,6 +49,7 @@ def matrix_spiral_print(M):
 			sc = sc + 1
 			
 	print(acc)
+
 
 #grid = [[1,  2,  3,  4,  5],
 #        [6,  7,  8,  9,  10],
