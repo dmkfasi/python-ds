@@ -50,7 +50,7 @@ def findTreeTop(nums):
   lastItem = nums[len(nums) - 1]
   #print(firstItem, lastItem)
   return math.floor((firstItem + lastItem) / 2)
-	
+
 print(createBalancedBST([1, 2, 3, 4]))
 #2134
 print(createBalancedBST([1, 2, 3, 4, 5, 6, 7]))
