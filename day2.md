@@ -1,3 +1,0 @@
-You are given a singly linked list and an integer k. Return the linked list, removing the k-th last element from the list. 
-
-Try to do it in a single pass and using constant space.
